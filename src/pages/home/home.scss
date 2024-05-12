@@ -1,0 +1,238 @@
+@import './../../components/variables.scss';
+@import './../../components/fonts.scss';
+
+.wrapper {
+    overflow: hidden;
+    font-family: "Roboto", sans-serif;
+
+    .main {
+        display: flex;
+        padding: 6rem 0rem 10rem 0rem;
+        max-height: 70vh;
+        justify-content: center;
+        background-image: url(./../../images/home/ImageForBackground.jpg);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+    
+        &__container {
+            max-width: 28rem;
+            width: 100%;
+            border-radius: 2rem;
+            text-align: center;
+            margin-left: 32rem;
+    
+            &__title {
+                font-size: 52px;
+                font-weight: 600;
+                color: $primaryLite;
+                margin-bottom: 2rem;
+                font-family: "Montserrat", sans-serif;
+            }
+    
+            &__caption {
+                font-size: $standart;
+                font-weight: 500;
+                color: $primary;
+                font-family: "Montserrat", sans-serif;
+                line-height: 1.8rem;
+                margin-bottom: 2rem;
+                
+            }
+    
+            &__button {
+                display: inline-block;
+                padding: 1rem 2rem;
+
+                color: $white;
+                background-color: $primary;
+                border-radius: 1rem;
+                border: 2px solid $primary;
+                font-size: $standart;
+                font-weight: 500;
+                text-decoration: none;
+                border-radius: 1rem;
+                transition: 333ms ease-in-out;
+
+                &:hover {
+                    border: 2px solid $primary;
+                    color: invert(100%);
+                    background-color: transparent;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .whyus {
+        margin: 4rem 6.25rem 6rem 6.25em;
+
+        &__title {
+            text-align: center;
+            font-size: $title;
+            font-weight: 500;
+            color: $primaryLite;
+            margin-bottom: 4rem;
+        }
+
+        &__container {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+
+            &__content{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+                text-align: center;
+
+                &__title {
+                    font-size: $titleLite;
+                    font-weight: 500;
+                    color: $primaryLite;
+                }
+
+                &__caption {
+                    font-size: $standart;
+                    font-weight: 400;
+                    color: $primaryLite;
+                    line-height: 1.8rem;
+                    font-family: "Montserrat", sans-serif;
+                    max-width: 32rem;
+                }
+
+                &__button {
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1rem 2rem;
+                    margin: 2rem auto 2rem auto;
+                    max-width: 300px;
+        
+                    color: $white;
+                    background-color: $primary;
+                    border: 2px solid $primary;
+                    border-radius: 1rem;
+                    font-size: $standart;
+                    font-weight: 500;
+                    text-decoration: none;
+                    transition: 333ms ease-in-out; 
+        
+                    &:hover {
+                        color: $primary;
+                        background-color: $white;
+                        font-weight: 500;
+                    }
+                }
+            }
+
+            &__image {
+                width: 500px;
+                border-radius: 1.5rem;
+            }
+        }
+    }
+
+    .weoffer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &__title {
+            text-align: center;
+            font-size: $title;
+            color: $primaryLite;
+            font-weight: 500;
+        }
+
+        &__container{
+            border: 2px solid $primaryLite;
+            border-radius: 1.5rem;
+            margin: 4rem auto 2rem auto;
+            display: flex;
+            gap: 2rem;
+
+            &__left {
+                display: flex;
+                flex-direction: column;
+                padding: 2rem 0rem;
+                padding-left: 2rem;
+
+                &__title {
+                    font-size: $titleLite;
+                    font-weight: 500;
+                    color: $primaryLite;
+                    margin: 2rem 0rem;
+                }
+
+                &__caption {
+                    font-size: $standart;
+                    font-weight: 400;
+                    color: $primaryLite;
+                    font-family: "Montserrat", sans-serif;
+                    line-height: 1.8rem;
+                }
+
+                &__image {
+                    width: 500px;
+                    border-radius: 1.5rem;
+                }
+            }
+
+            &__right {
+                display: flex;
+                flex-direction: column;
+                padding: 2rem 0rem;
+                padding-right: 2rem;
+                text-align: right;
+
+                &__title {
+                    font-size: $titleLite;
+                    font-weight: 500;
+                    color: $primaryLite;
+                    margin-bottom: 2rem;
+                }
+
+                &__caption {
+                    font-size: $standart;
+                    font-weight: 400;
+                    color: $primaryLite;
+                    margin-bottom: 2rem;
+                    font-family: "Montserrat", sans-serif;
+                    line-height: 1.8rem;
+                }
+
+                &__image {
+                    width: 500px;
+                    border-radius: 1.5rem;
+                }
+            }
+        }
+
+        &__button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem 2rem;
+            margin: 0rem auto 2rem auto;
+            max-width: 300px;
+
+            color: $white;
+            background-color: $primary;
+            border: 2px solid $primary;
+            border-radius: 1rem;
+            font-size: $standart;
+            font-weight: 500;
+            text-decoration: none;
+            transition: 333ms ease-in-out; 
+
+            &:hover {
+                color: $primary;
+                background-color: $white;
+                font-weight: 500;
+            }
+    }
+    }
+}
+
