@@ -1,0 +1,63 @@
+@import './../components/variables.scss';
+@import './../components/fonts.scss';
+
+@mixin button($width, $height) {
+    width: $width;
+    height: $height;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $primary500;
+    border: 1px solid $primary500;
+    border-radius: 8px;
+
+    color: $white;
+    font-size: $button;
+    text-decoration: none;
+    transition: 333ms;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+
+    &:hover {
+        background-color: transparent;
+        color: $primary500;
+    }
+}
+
+@mixin mainHeading(){
+    text-align: center;
+    color: $gray900;
+    font-size: $ag2;
+    line-height: 72px;
+    font-family: "Epilogue", sans-serif;
+    font-weight: 800;
+
+    .blueText {
+        color: $primary500;
+    }
+}
+
+@mixin heading($textaling){
+    text-align: $textaling;
+    color: $gray900;
+    font-size: $ag3;
+    line-height: 64px;
+    font-family: "Epilogue", sans-serif;
+    font-weight: 800;
+
+    .blueText {
+        color: $primary500;
+    }
+}
+
+@mixin bodyM($textaling){
+    font-size: $agM;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    color: $gray600;
+
+    text-align: $textaling;
+}

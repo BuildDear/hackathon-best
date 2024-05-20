@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-semibold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.nav {
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+.nav__top-line {
+  display: block;
+  width: 100vw;
+  height: 2vh;
+  background-color: #627254;
+}
+.nav__container {
+  display: flex;
+  justify-content: center;
+  gap: 22rem;
+  margin: 2rem 2rem;
+}
+.nav__container__img {
+  width: 300px;
+  height: 70px;
+}
+.nav__container__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.nav__container__menu__auth {
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+}
+.nav__container__menu__auth__login, .nav__container__menu__auth__singin {
+  display: block;
+  border: 2px solid #627254;
+  border-radius: 0.5rem;
+  padding: 0.6rem 2rem;
+  color: #627254;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 333ms ease-out;
+}
+.nav__container__menu__auth__login:hover, .nav__container__menu__auth__singin:hover {
+  background-color: #627254;
+  color: #fff;
+}
+.nav__container__menu .nav__container__menu__links {
+  display: flex;
+  gap: 3rem;
+}
+.nav__container__menu .nav__container__menu__links__item {
+  color: #76885B;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 333ms;
+  padding: 0.2rem 0.4rem;
+}
+.nav__container__menu .nav__container__menu__links__item:hover {
+  background-color: #627254;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.2rem 0.4rem;
+}

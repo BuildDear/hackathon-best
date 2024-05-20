@@ -5,10 +5,13 @@ import './../../components/reset.css'
 import Help from './../../images/home/help.jpg'
 import Medicine from './../../images/home/medicine.jpeg'
 import Military from './../../images/home/Military.jpg'
+import Slaider from "../../components/slider/slider";
 
 function Home() {
+
   return (
     <div className="wrapper">
+
         <main className="main">
           <div className="main__container">
             <h2 className="main__container__title">#MilitaryHelp</h2>
@@ -57,6 +60,7 @@ function Home() {
           <h2 className="weoffer__title">Що ми пропонуємо?</h2>
 
           <div className="weoffer__container">
+
             <div className="weoffer__container__left">
               <img src={ Medicine } alt="" className="weoffer__container__left__image" />
               <p className="weoffer__container__left__title">Медична підготовка</p>
@@ -94,6 +98,11 @@ function Home() {
             Дізнатися більше
           </Link>
         </section>
+
+        <section className="slider">
+          <Slaider />
+        </section>
+
     </div>
   );
 }
