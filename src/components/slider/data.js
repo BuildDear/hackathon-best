@@ -1,13 +1,7 @@
 import person from './images/person.jpg';
 
-export interface IPeople {
-    id: number;
-    image: string;
-    name: string;
-    quote: string;
-}
 
-const people: IPeople[] = [
+const people = [
     {
         id: 1,
         image: person,
