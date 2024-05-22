@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import './register.scss'
-import { Link } from 'react-router-dom'; 
+import './register.scss';
 
 function Register() {
     const [formData, setFormData] = useState({
@@ -10,29 +9,31 @@ function Register() {
         password: '',
         confirmPassword: '',
         agreeToTerms: false,
-        role: '', 
+        role: '',
     });
+
+    const [error, setError] = useState('');
 
     const handleChange = (e) => {
         const { name, type, checked, value } = e.target;
         const finalValue = type === 'checkbox' ? checked : value;
         setFormData({
             ...formData,
-            [name]: type === 'checkbox' && name === 'role' ? '' : finalValue,
-            ...(name === 'role' && { role: value }),
+            [name]: finalValue,
         });
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (formData.password !== formData.confirmPassword) {
-            alert("Passwords do not match.");
+            setError("Passwords do not match.");
             return;
         }
         if (!formData.agreeToTerms) {
-            alert("You must agree to the terms and conditions.");
+            setError("You must agree to the terms and conditions.");
             return;
         }
+        setError('');
         console.log('Form Data Submitted:', formData);
     };
 
@@ -40,6 +41,7 @@ function Register() {
         <div className="wrapper register">
             <form onSubmit={handleSubmit} className="register__form">
                 <h2 className="register__form__title">Реєстрація</h2>
+                {error && <p className="register__form__error">{error}</p>}
                 <div className="register__form__group">
                     <label htmlFor="username" className="register__form__group__caption">Ім'я:</label>
                     <input type="text" id="username" name="username" className="register__form__group__input" value={formData.username} onChange={handleChange} placeholder="Ім'я" required />
@@ -78,8 +80,7 @@ function Register() {
                     </label>
                 </div>
 
-
-                <Link to="/" className="register__form__group__button" type="submit">Зареєструватися</Link>
+                <button type="submit" className="register__form__group__button">Зареєструватися</button>
             </form>
         </div>
     );

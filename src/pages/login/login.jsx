@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './login.scss';
-import { Link } from 'react-router-dom'; 
 
 function Login() {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         email: '',
         password: ''
@@ -19,7 +20,7 @@ function Login() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Login Data Submitted:', formData);
-        
+        navigate("/home"); // Using navigate for redirection in v6
     };
 
     return (
@@ -34,9 +35,7 @@ function Login() {
                     <label htmlFor="password" className="login__form__group__caption">Пароль:</label>
                     <input type="password" id="password" name="password" className="login__form__group__input" value={formData.password} onChange={handleChange} placeholder="Введіть ваш пароль" required />
                 </div>
-
-                
-                <Link to="/" className="login__form__group__button" type="submit">Увійти</Link>
+                <button type="submit" className="login__form__group__button">Увійти</button>
             </form>
         </div>
     );

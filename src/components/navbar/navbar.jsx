@@ -9,7 +9,7 @@ function NavBar() {
       <span className="nav__top-line"></span>
 
       <div className="nav__container">
-        <img src={ Logo } alt="" className="nav__container__img" />
+      <img src={ Logo } alt="Logo" className="nav__container__img" />
 
         <div className="nav__container__menu">
           <div className="nav__container__menu__auth">
